@@ -40,6 +40,8 @@ description: 帮助 FDE 将客户需求转成有证据、可验证的业务问�
 
 按任务规模使用 [定义卡](templates/problem-card.md)、[诊断底稿](templates/diagnosis.md)、[验证计划](templates/validation-plan.md)、[审查报告](templates/review.md)。一页纸是决策摘要，不是删除风险和依据的理由；细节放底稿。关键数值可运行 `scripts/check_math.py` 复核，但脚本不能验证证据真实性。
 
+先分别判断改善价值、候选干预和下一步准备度，并写明所针对的环节。某个环节运转有效，不代表其他环节没有改善机会；不适合AI不等于不值得做。证据未知不等于价值不成立，结论规则见 decision.md。
+
 每轮明确一个建议结论：Proceed / Investigate / Non-AI / Stop-Defer，带依据、尚存不确定性、下一步、责任岗位及重开条件。Proceed 只代表所写范围的下一阶段，不是生产上线授权；未确认的责任人和期限写“建议/待确认”。最终决定由客户业务负责人作出。
 
 需要落盘时在用户工作区新建场景目录，不写入 Skill 安装目录、不改上游文件。保留原始需求、来源定位、证据台账与修订记录，使用 [provenance.md](references/provenance.md)；对外或写书前生成匿名化副本。没有明确授权，不提交、发送或公开客户材料。

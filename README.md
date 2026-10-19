@@ -1,4 +1,4 @@
-# fde-problem-framing · v0.2.1
+# fde-problem-framing · v0.2.2
 
 独立的第二个 FDE Skill：针对一个具体业务问题，按需澄清、现场诊断、生成定义卡或审查。fde-ramp 负责行业入门与机会发现；本 Skill 接收其选定场景，不需要安装 ramp，也不修改其仓库。
 
@@ -44,6 +44,8 @@ python3 scripts/check_math.py --stage 20 --share 0.5 --target 22 --unaffected-ca
 ## 煤层气标准检索验证
 新增 [煤层气案例](examples/cbm-standards/README.md)，重点为条款定位与工况适用性。公开材料与专家方向反馈分开留底；验证情况见 [v0.2结果](tests/RESULTS-v02.md)。
 
-本轮修订将煤层气案例收回问题定义与诊断，见 [v0.2.1验证记录](tests/RESULTS-v021.md)。
+本轮修订将煤层气案例收回问题定义与诊断，见 [v0.2.2验证记录](tests/RESULTS-v021.md)。
 
 私有仓库以根路径安装后须检查 references/、templates/ 等子目录是否齐全；本机曾遇到仅安装入口文件的情况，已补齐。完整压缩包解压复制可避免这一缺失。
+
+本版区分改善价值、干预选择与推进状态，见 [判断流程](references/decision-flow.md) 与 [本轮验证](tests/RESULTS-v022.md)。
