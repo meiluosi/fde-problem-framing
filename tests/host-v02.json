@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-19",
+  "installed_from_commit": "e83b85f",
+  "installer": "skill-installer/install-skill-from-github.py",
+  "discovery": {
+    "name": "fde-problem-framing",
+    "scope": "user",
+    "enabled": true,
+    "error": null
+  },
+  "automatic_invocation_tested": false
+}
