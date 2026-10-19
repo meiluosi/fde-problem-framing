@@ -1,0 +1,4 @@
+interface:
+  display_name: "FDE 业务问题定义"
+  short_description: "澄清具体业务问题，以证据诊断根因、比较干预方式并审查成功标准"
+  default_prompt: "用 $fde-problem-framing 分析这份客户需求，先找出最影响下一步判断的证据缺口。"

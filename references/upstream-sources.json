@@ -1,0 +1,30 @@
+[
+  {
+    "path": "README.md",
+    "url": "https://github.com/meiluosi/fde-ramp/blob/main/README.md",
+    "blob_sha": "75ae823d2e75e1e51c5ed982d0fe56e0b49bbacb",
+    "accessed": "2026-10-19",
+    "purpose": "接口与方法边界核对；未复制私有仓库全文"
+  },
+  {
+    "path": "SKILL.md",
+    "url": "https://github.com/meiluosi/fde-ramp/blob/main/SKILL.md",
+    "blob_sha": "dd836029c1e0092e72bab84aa28c4a508e93bc6f",
+    "accessed": "2026-10-19",
+    "purpose": "接口与方法边界核对；未复制私有仓库全文"
+  },
+  {
+    "path": "references/opportunity-analysis.md",
+    "url": "https://github.com/meiluosi/fde-ramp/blob/main/references/opportunity-analysis.md",
+    "blob_sha": "bc1e5557c033978cc339d8aebb282ed45393f558",
+    "accessed": "2026-10-19",
+    "purpose": "接口与方法边界核对；未复制私有仓库全文"
+  },
+  {
+    "path": "references/evidence.md",
+    "url": "https://github.com/meiluosi/fde-ramp/blob/main/references/evidence.md",
+    "blob_sha": "df3ef7067d210d16b08dd922596d9dbbc003b069",
+    "accessed": "2026-10-19",
+    "purpose": "接口与方法边界核对；未复制私有仓库全文"
+  }
+]
