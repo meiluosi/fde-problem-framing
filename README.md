@@ -1,10 +1,10 @@
-# fde-problem-framing · v0.1.0
+# fde-problem-framing · v0.2.0
 
 独立的第二个 FDE Skill：针对一个具体业务问题，按需澄清、现场诊断、生成定义卡或审查。fde-ramp 负责行业入门与机会发现；本 Skill 接收其选定场景，不需要安装 ramp，也不修改其仓库。
 
 ## 安装与使用
 
-将整个 `fde-problem-framing` 文件夹放入宿主的 skills 目录，保留目录名与 SKILL.md。Codex 常用 `${CODEX_HOME:-$HOME/.codex}/skills/`；本次只交付工程，没有改动本机安装目录。也可不安装，直接让助手读取本目录 SKILL.md。
+将整个 `fde-problem-framing` 文件夹放入宿主的 skills 目录，保留目录名与 SKILL.md。Codex 常用 `${CODEX_HOME:-$HOME/.codex}/skills/`；本机安装状态见 tests/RESULTS-v02.md。也可不安装，直接让助手读取本目录 SKILL.md。
 
 例如在解压目录运行（已有同名目录时先检查，不覆盖）：
 ```sh
@@ -40,3 +40,6 @@ python3 scripts/check_math.py --stage 20 --share 0.5 --target 22 --unaffected-ca
 
 ## 书稿与分发
 原始需求、来源指纹和修订记录已保留；案例数字来自用户教学情境或显式条件推导。没有公开授权推定，分发前按 references/provenance.md 检查来源元数据与匿名化。未复制私有仓库全文。原私有仓库保持不变。本工程按用户要求独立托管为私有仓库，后续推进见 [ROADMAP.md](ROADMAP.md)，历史验证与待办见 [DEVELOPMENT.md](DEVELOPMENT.md)。
+
+## 煤层气标准检索验证
+新增 [煤层气案例](examples/cbm-standards/README.md)，重点为条款定位与工况适用性。公开材料与专家方向反馈分开留底；验证情况见 [v0.2结果](tests/RESULTS-v02.md)。

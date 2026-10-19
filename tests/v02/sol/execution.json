@@ -1,0 +1,24 @@
+{
+  "requested_model": "gpt-6.1-sol",
+  "actual_model_snapshot": "不可见，未推测",
+  "date": "2026-10-19",
+  "mode": "offline_text_forward_test",
+  "read_files": [
+    "outputs/fde-problem-framing/SKILL.md",
+    "outputs/fde-problem-framing/references/modes.md",
+    "outputs/fde-problem-framing/references/evidence.md",
+    "outputs/fde-problem-framing/references/decision.md",
+    "outputs/fde-problem-framing/references/metrics.md",
+    "outputs/fde-problem-framing/references/retrieval-framing.md",
+    "outputs/fde-problem-framing/references/provenance.md",
+    "outputs/fde-problem-framing/templates/problem-card.md",
+    "outputs/fde-problem-framing/examples/cbm-standards/catalog.json"
+  ],
+  "external_search_or_operations": false,
+  "scripts_or_installation_run": false,
+  "outputs": ["01.md", "02.md", "03.md", "04.md", "05.md"],
+  "rule_observations": [
+    "四种主模式没有行业入门路由的专门输出格式；本次按description退出定义流程，继续一般说明。",
+    "来源访问日期来自catalog，不应被误写为本次官方网页核验日期。"
+  ]
+}

@@ -30,6 +30,8 @@ description: 帮助 FDE 将客户需求转成有证据、可验证的业务问�
 
 诊断和生成时读 [decision.md](references/decision.md) 比较流程、规则、传统软件、AI 辅助、自动化；读 [metrics.md](references/metrics.md) 定义基线、技术→使用→业务因果链与安全护栏。审查时同时读这两份，并核对反例、抽样、覆盖范围及算术。
 
+标准规范、制度或知识检索场景另读 [retrieval-framing.md](references/retrieval-framing.md)，区分找到文件、核验状态范围与回答正文条款。
+
 有助于说明判断时按 [diagrams.md](references/diagrams.md) 生成 Mermaid：需求诊断、问题树、现状/目标流程、指标因果链。按实际场景选择，不强迫每次画四张图；图后写一句关键含义。目标流程标“提案”，未知节点和假设边显式标注。
 
 ## 输出与退出

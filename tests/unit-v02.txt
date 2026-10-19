@@ -1,0 +1,22 @@
+test_cli (test_math.MathTests.test_cli) ... ok
+test_cli_nan (test_math.MathTests.test_cli_nan) ... ok
+test_coverage_boundaries (test_math.MathTests.test_coverage_boundaries) ... ok
+test_floor (test_math.MathTests.test_floor) ... ok
+test_full_stage (test_math.MathTests.test_full_stage) ... ok
+test_impossible (test_math.MathTests.test_impossible) ... ok
+test_invalid (test_math.MathTests.test_invalid) ... ok
+test_ninety_percent (test_math.MathTests.test_ninety_percent) ... ok
+test_no_document_conversion (test_math.MathTests.test_no_document_conversion) ... ok
+test_no_saving (test_math.MathTests.test_no_saving) ... ok
+test_slower_target (test_math.MathTests.test_slower_target) ... ok
+test_transfer_values (test_math.MathTests.test_transfer_values) ... ok
+test_weighted (test_math.MathTests.test_weighted) ... ok
+test_weighted_boundaries (test_math.MathTests.test_weighted_boundaries) ... ok
+test_links (test_package.PackageTests.test_links) ... ok
+test_portable_paths (test_package.PackageTests.test_portable_paths) ... ok
+test_source_fingerprints (test_package.PackageTests.test_source_fingerprints) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.077s
+
+OK

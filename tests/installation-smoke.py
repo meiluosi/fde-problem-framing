@@ -4,7 +4,7 @@ import tempfile,shutil,subprocess,sys
 source=Path(__file__).resolve().parents[1]
 with tempfile.TemporaryDirectory(prefix='fde-skill-install-') as temp:
  dest=Path(temp)/'skills'/source.name
- shutil.copytree(source,dest,ignore=shutil.ignore_patterns('__pycache__'))
+ shutil.copytree(source,dest,ignore=shutil.ignore_patterns('__pycache__','.git'))
  assert (dest/'SKILL.md').is_file()
  result=subprocess.run([sys.executable,str(dest/'scripts/check_math.py'),'--stage','20','--share','.5','--target','22'],cwd=temp,capture_output=True,text=True)
  assert result.returncode==0,result.stderr

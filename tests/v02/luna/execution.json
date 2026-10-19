@@ -1,0 +1,40 @@
+{
+  "requested_model": "gpt-6-luna",
+  "date": "2026-10-19",
+  "timezone": "Asia/Shanghai",
+  "execution_type": "offline text-only forward evaluation",
+  "script_or_installation_run": false,
+  "external_search_or_operation": false,
+  "read_files": [
+    "outputs/fde-problem-framing/SKILL.md",
+    "outputs/fde-problem-framing/references/modes.md",
+    "outputs/fde-problem-framing/references/evidence.md",
+    "outputs/fde-problem-framing/references/decision.md",
+    "outputs/fde-problem-framing/references/metrics.md",
+    "outputs/fde-problem-framing/references/retrieval-framing.md",
+    "outputs/fde-problem-framing/references/diagrams.md",
+    "outputs/fde-problem-framing/templates/problem-card.md",
+    "outputs/fde-problem-framing/templates/diagnosis.md",
+    "outputs/fde-problem-framing/templates/validation-plan.md",
+    "outputs/fde-problem-framing/templates/review.md",
+    "outputs/fde-problem-framing/references/provenance.md",
+    "outputs/fde-problem-framing/examples/cbm-standards/catalog.json"
+  ],
+  "attempted_but_not_read": [
+    "examples/cbm-standards/catalog.json (relative path did not exist; located and read outputs/fde-problem-framing/examples/cbm-standards/catalog.json)"
+  ],
+  "outputs": [
+    "work/cbm-eval-luna/01-clarification.md",
+    "work/cbm-eval-luna/02-diagnosis.md",
+    "work/cbm-eval-luna/03-problem-card.md",
+    "work/cbm-eval-luna/04-review.md",
+    "work/cbm-eval-luna/05-routing.md",
+    "work/cbm-eval-luna/execution.json"
+  ],
+  "input_limits": [
+    "Only the explicitly permitted catalog metadata was read from examples.",
+    "No other examples, tests, or parent-task outputs were read.",
+    "Catalog entries identify themselves as metadata and fulltext_verified=false; no standard full text was read."
+  ],
+  "rules_issue_observed": "The skill instructs consulting diagrams.md for scenario-appropriate diagrams; this evaluation did not create one because the requested deliverables are text-only files and the diagram rule is conditional ('when it helps'). The task asks actual outputs for each route and preserves evidence states; no rule conflict prevented completion."
+}
