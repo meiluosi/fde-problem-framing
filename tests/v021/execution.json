@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-19",
+  "task": "按指定 Skill 对所给煤层气生产条款查询请求开展问题定义与诊断",
+  "read_files": [
+    "outputs/fde-problem-framing/SKILL.md",
+    "outputs/fde-problem-framing/references/modes.md",
+    "outputs/fde-problem-framing/references/evidence.md",
+    "outputs/fde-problem-framing/references/decision.md",
+    "outputs/fde-problem-framing/references/metrics.md",
+    "outputs/fde-problem-framing/references/retrieval-framing.md",
+    "outputs/fde-problem-framing/templates/retrieval-answer.md",
+    "outputs/fde-problem-framing/references/provenance.md"
+  ],
+  "business_evidence": "仅本次提供的用户请求；没有正文、日志、访谈或测量",
+  "constraints_observed": {
+    "external_search": false,
+    "examples_or_tests_read": false,
+    "prior_conversations_read": false,
+    "repository_modified": false,
+    "production_actions": false,
+    "tool_development": false,
+    "self_scoring": false
+  },
+  "outputs": ["work/scope-validation/output.md", "work/scope-validation/execution.json"],
+  "limitations": ["未定位或核验实际条款", "未确认具体工况、人员和业务基线", "诊断假设待真实案例取证"]
+}
