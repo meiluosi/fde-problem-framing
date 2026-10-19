@@ -1,7 +1,7 @@
 {
   ".gitignore": "6f1fe172df6d8a75c57a95e7b1afdfb48a1a0bb52181887ac337b628e74527ba",
   "DEVELOPMENT.md": "80e1a81515d67ab3063db7d246e6a37858311c1aae278bf850db94bcb7934d0f",
-  "README.md": "25ab6387098a06656b04215cd4dd8b775230fe347cf95e4b93e2602285a1faca",
+  "README.md": "33d6ec65bd68af370942d18d24f9b0ec58fe8a488d12865bca41ce6817481ebd",
   "ROADMAP.md": "f9b818f47d45559e2307cc45039dd6f1d5b22c65b198e93540ec1ecc1271722d",
   "SKILL.md": "15ba600bc6a00a454f40d050652ba8b4bf8752b64cece216b9536e7fc225b805",
   "agents/openai.yaml": "6601cc67003a09624fe79bc2b99bd40b6f819be1ba4e7c2a16455b5c2dbafa51",
@@ -43,7 +43,7 @@
   "references/decision.md": "c85d6027040f90bb5065e4f1c928a046db4d90fff2a1a5ac4f505b2f7a5b3c9c",
   "references/diagrams.md": "f1f81484d89ac0ad5250de41484b147e91ea99cbd97526e938b851bbd88d1d93",
   "references/evidence.md": "8b3db831b3223349b6e174d5b289ba6a8ddd37fc0f05ece5d76ece7f2de867b0",
-  "references/handoff.md": "fdc4151b0696f3487582f5591d1c4fb4df9e8edab6fe0e16d0b560093b895bb6",
+  "references/handoff.md": "31b747ad394179625804ea47b9b65ee2334b8757c6c0461ff7129895dc9ad702",
   "references/metrics.md": "b48b27360d5d6330e8e59159ed36ed9e80f3c74404a643da7e26eaeeb127f80c",
   "references/modes.md": "25e8c879c0d7a313266a23ab283a5bf600d4cb6c3b882949468a6c29f4448860",
   "references/original-development-request.md": "eebe530ed465797eff8db0cd22289c8c320042153fd25c94f364cb447c6c7280",

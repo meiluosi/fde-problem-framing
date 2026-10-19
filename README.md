@@ -28,6 +28,20 @@ cp -R -n fde-problem-framing "${CODEX_HOME:-$HOME/.codex}/skills/"
 - tests/：可重复单元测试、行为任务与实际结果。
 - DEVELOPMENT.md：来源、方法修订与待办。
 
+## FDE Skill 系列
+
+各 Skill 独立运行，通过手动读取的产物衔接，不互相依赖安装。典型顺序：ramp → problem-framing → demo → pilot，comms 贯穿各阶段。
+
+| Skill | 管什么 | 结论词 |
+|---|---|---|
+| [fde-ramp](https://github.com/meiluosi/fde-ramp) | 见客户前搭起行业基本盘，拿图去被一线改 | 自检分数 |
+| [fde-problem-framing](https://github.com/meiluosi/fde-problem-framing) | 把需求变成有证据的业务问题，比较 AI 与非 AI | Proceed / Investigate / Non-AI / Stop-Defer |
+| [fde-comms](https://github.com/meiluosi/fde-comms) | 与人的关键沟通：访谈、向上汇报、坏消息 | 无（产出文稿） |
+| [fde-demo](https://github.com/meiluosi/fde-demo) | 设计并复盘一次客户 Demo，换验证与信任 | Proceed / Iterate / Pivot / Stop-Defer |
+| [fde-pilot](https://github.com/meiluosi/fde-pilot) | 把 Demo 通过的方案做成可检验的试点并判定成效 | Proceed / Iterate / Pivot / Stop-Defer |
+
+跨 Skill 引用时加前缀保留原编号（`ramp:S01`、`framing:V2`、`demo:L3`、`pilot:M2`）；同名结论词含义随阶段不同，引用时写 `framing:Proceed`、`demo:Proceed`。编号、结论词、边界与回写规则的完整约定见 fde-demo 仓库的 `references/series.md`（私有仓库，链接需登录）。
+
 ## 运行验证
 Python 3.9+，核心脚本与测试仅用标准库。
 ```sh
