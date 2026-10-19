@@ -63,3 +63,6 @@ python3 scripts/check_math.py --stage 20 --share 0.5 --target 22 --unaffected-ca
 私有仓库以根路径安装后须检查 references/、templates/ 等子目录是否齐全；本机曾遇到仅安装入口文件的情况，已补齐。完整压缩包解压复制可避免这一缺失。
 
 本版区分改善价值、干预选择与推进状态，见 [判断流程](references/decision-flow.md) 与 [本轮验证](tests/RESULTS-v022.md)。
+
+## 许可
+MIT，见 [LICENSE](LICENSE)。
