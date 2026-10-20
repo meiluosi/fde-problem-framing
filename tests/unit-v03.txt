@@ -31,6 +31,6 @@ test_update_rejects_incomplete_old_install (test_release.ReleaseTests.test_updat
 test_update_requires_external_backup (test_release.ReleaseTests.test_update_requires_external_backup) ... ok
 
 ----------------------------------------------------------------------
-Ran 31 tests in 0.598s
+Ran 31 tests in 0.652s
 
 OK

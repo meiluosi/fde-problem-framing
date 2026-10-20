@@ -59,4 +59,29 @@ python3 scripts/package.py build --output ../fde-problem-framing-v0.3.0.zip
 
 ## 来源与书稿
 
-公开仓库：[meiluosi/fde-problem-framing](https://github.com/meiluosi/fde-problem-framing)。上游ramp仅保存接口来源与指纹，未复制私有全文；公开用户无法访问私有来源时仍可独立使用本Skill。原话、证据与修订分别留底；书稿使用前按 [来源与匿名化规则](references/provenance.md)处理。本库未代用户选择分发许可证。
+公开仓库：[meiluosi/fde-problem-framing](https://github.com/meiluosi/fde-problem-framing)。上游ramp仅保存接口来源与指纹，未复制私有全文；公开用户无法访问私有来源时仍可独立使用本Skill。原话、证据与修订分别留底；书稿使用前按 [来源与匿名化规则](references/provenance.md)处理。沿用远端已添加的MIT许可，见 [LICENSE](LICENSE)。
+
+## FDE Skill 系列
+
+各 Skill 独立运行，通过手动读取的产物衔接，不互相依赖安装。典型顺序：ramp → problem-framing → route-selection → knowledge-base（场景含文档检索时）→ demo → pilot，comms 贯穿各阶段。
+
+| Skill | 管什么 | 结论词 |
+|---|---|---|
+| [fde-ramp](https://github.com/meiluosi/fde-ramp) | 见客户前搭起行业基本盘，拿图去被一线改 | 自检分数 |
+| [fde-problem-framing](https://github.com/meiluosi/fde-problem-framing) | 把需求变成有证据的业务问题，比较 AI 与非 AI | 价值 / 方向 / 推进状态（三字段，Non-AI仅为方向标签） |
+| [fde-route-selection](https://github.com/meiluosi/fde-route-selection) | 业务问题定义之后，先过滤合规与部署等硬约束，再选适配路线，最后用客户样本比选模型 | 见该仓库 |
+| [fde-knowledge-base](https://github.com/meiluosi/fde-knowledge-base) | 路线含文档检索（RAG）时，判断知识够不够、怎么治、怎么评、质量卡在哪 | Proceed / Investigate / Pivot / Stop-Defer |
+| [fde-comms](https://github.com/meiluosi/fde-comms) | 与人的关键沟通：访谈、向上汇报、坏消息 | 无（产出文稿） |
+| [fde-demo](https://github.com/meiluosi/fde-demo) | 设计并复盘一次客户 Demo，换验证与信任 | Proceed / Iterate / Pivot / Stop-Defer |
+| [fde-pilot](https://github.com/meiluosi/fde-pilot) | 把 Demo 通过的方案做成可检验的试点并判定成效 | Proceed / Iterate / Pivot / Stop-Defer |
+
+跨 Skill 引用时加前缀保留原编号（`ramp:S01`、`framing:V2`、`kb:Q01`、`demo:L3`、`pilot:M2`）；同名结论词含义随阶段不同，引用时写 `framing:Proceed`、`demo:Proceed`。编号、结论词、边界与回写规则的完整约定见 [fde-demo 的 references/series.md](https://github.com/meiluosi/fde-demo/blob/main/references/series.md)。
+
+
+## 参考与致谢
+
+本系列各 Skill 在方法设计上不同程度参考了《FDE:AI落地实战指南》，以及作者本人的 FDE 实践经历。各 Skill 的流程、模板、规则与脚本是在此基础上改写和扩展的方法。示例的合成、教学或用户经验来源以各案例标注为准，不能将经验陈述冒充客户实测。
+
+
+## 许可
+MIT，见 [LICENSE](LICENSE)。
