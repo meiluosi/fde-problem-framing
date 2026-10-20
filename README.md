@@ -55,14 +55,14 @@ python3 scripts/check_math.py --stage 20 --share 0.5 --target 22 --unaffected-ca
 实际结果与限制见 tests/RESULTS.md。静态规范检查和数学测试不能证明模型必然遵守流程，更不能证明客户方案有效。按 tests/behavioral-cases.md 可在目标宿主重跑行为测试。
 
 ## 书稿与分发
-原始需求、来源指纹和修订记录已保留；案例数字来自用户教学情境或显式条件推导。没有公开授权推定，分发前按 references/provenance.md 检查来源元数据与匿名化。未复制私有仓库全文。原私有仓库保持不变。本工程按用户要求独立托管为私有仓库，后续推进见 [ROADMAP.md](ROADMAP.md)，历史验证与待办见 [DEVELOPMENT.md](DEVELOPMENT.md)。
+原始需求、来源指纹和修订记录已保留；案例数字来自用户教学情境或显式条件推导。没有公开授权推定，分发前按 references/provenance.md 检查来源元数据与匿名化。未复制私有仓库全文。原私有仓库保持不变。本工程独立托管为公开仓库（MIT），后续推进见 [ROADMAP.md](ROADMAP.md)，历史验证与待办见 [DEVELOPMENT.md](DEVELOPMENT.md)。
 
 ## 煤层气标准检索验证
 新增 [煤层气案例](examples/cbm-standards/README.md)，重点为条款定位与工况适用性。公开材料与专家方向反馈分开留底；验证情况见 [v0.2结果](tests/RESULTS-v02.md)。
 
 本轮修订将煤层气案例收回问题定义与诊断，见 [v0.2.2验证记录](tests/RESULTS-v021.md)。
 
-私有仓库以根路径安装后须检查 references/、templates/ 等子目录是否齐全；本机曾遇到仅安装入口文件的情况，已补齐。完整压缩包解压复制可避免这一缺失。
+以根路径安装后须检查 references/、templates/ 等子目录是否齐全；本机曾遇到仅安装入口文件的情况，已补齐。完整压缩包解压复制可避免这一缺失。
 
 本版区分改善价值、干预选择与推进状态，见 [判断流程](references/decision-flow.md) 与 [本轮验证](tests/RESULTS-v022.md)。
 
