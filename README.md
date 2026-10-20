@@ -1,51 +1,62 @@
-# fde-problem-framing · v0.2.2
+# fde-problem-framing · v0.3.0 验证版
 
-独立的第二个 FDE Skill：针对一个具体业务问题，按需澄清、现场诊断、生成定义卡或审查。fde-ramp 负责行业入门与机会发现；本 Skill 接收其选定场景，不需要安装 ramp，也不修改其仓库。
+FDE业务问题定义与诊断助手。把客户诉求整理成有证据边界的问题、竞争解释和可执行下一步，比较流程、知识整理、规则、传统软件与AI。
 
-## 安装与使用
+`fde-ramp`负责行业入门与机会扫描；本Skill只承接选定场景，也可独立使用。它不代替一线证据、客户决定或系统实施。
 
-将整个 `fde-problem-framing` 文件夹放入宿主的 skills 目录，保留目录名与 SKILL.md。Codex 常用 `${CODEX_HOME:-$HOME/.codex}/skills/`；本机安装状态见 tests/RESULTS-v02.md。也可不安装，直接让助手读取本目录 SKILL.md。
+## 三分钟开始
 
-例如在解压目录运行（已有同名目录时先检查，不覆盖）：
+1. 下载 [v0.3.0版本包](https://github.com/meiluosi/fde-problem-framing/releases/tag/v0.3.0)，解压后进入 `fde-problem-framing` 文件夹。也可完整克隆本公开仓库，勿只复制SKILL.md。
+2. Python 3.9+，无第三方Python依赖：
+
 ```sh
-mkdir -p "${CODEX_HOME:-$HOME/.codex}/skills"
-cp -R -n fde-problem-framing "${CODEX_HOME:-$HOME/.codex}/skills/"
+python3 scripts/package.py verify
+python3 scripts/package.py install --dest "${CODEX_HOME:-$HOME/.codex}/skills/fde-problem-framing"
 ```
-如宿主未重新发现技能，开启新会话。DSH 用户可按其已有 fde-ramp 安装方式放到对应 skills 目录；未做该宿主实机测试。
 
-可直接说：
-- “用 $fde-problem-framing 澄清这个需求：我们要上AI客服。先问最影响下一步的问题。”
-- “读取 ramp/ 的 activities.md、flow.md 和 process-metrics.md，只诊断材料核对这一环。”
-- “把现有证据生成一页纸定义卡，缺证据保留 Investigate。”
-- “审查这份定义，重点核对目标可达性、手写覆盖和200单抽样。”
+已有安装时加 `--update --backup-dir "${CODEX_HOME:-$HOME/.codex}/skill-backups"`（备份必须在skills目录之外，避免被重复发现）：先核对旧文件未修改，完整安装成功后保留旧目录备份；有本地修改或旧安装不完整则停止，不覆盖。先保存自己的修改，再选择新的安装目录或人工合并。散列只能检测文件一致性，不能证明发布者身份。
 
-## 工程内容
-- SKILL.md：入口与四种模式路由。
-- references/：衔接、证据、决策、指标、作图、留底规范。
-- templates/：定义卡、底稿、验证计划、审查和修订记录。
-- examples/：理赔完整产物与客服、问数案例，均非真实现场证据。
-- scripts/check_math.py：条件算术审查，不是业务审批器。
-- tests/：可重复单元测试、行为任务与实际结果。
-- DEVELOPMENT.md：来源、方法修订与待办。
+安装后在下一轮使用 `$fde-problem-framing`；如宿主没有发现，开启新会话。其他宿主使用其技能目录，尚未逐一实机验证。也可直接让助手读取本目录SKILL.md。
 
-## 运行验证
-Python 3.9+，核心脚本与测试仅用标准库。
+3. 任选一种请求：
+
+| 模式 | 可以直接说 |
+|---|---|
+| 澄清 | 用此Skill澄清“客服太慢，想上AI”，先问最影响决定的问题 |
+| 诊断 | 已知主要等待发生在工单转派，请提出竞争解释与最小验证 |
+| 生成 | 根据已有信息先出一页纸，缺证据写清楚，不继续访谈 |
+| 审查 | 审查这份定义，检查口径、覆盖、根因假设和非AI备选 |
+
+## 输出是什么
+
+一页问题卡、按需诊断底稿、验证计划、审查报告及辅助Mermaid图。决定拆成三列：
+
+| 价值判断 | 干预方向 | 推进状态 |
+|---|---|---|
+| Supported / Unknown / Unsupported | 现状、流程、知识整理、规则搜索、传统软件、AI辅助、组合或未定 | Proceed / Investigate / Stop-Defer |
+
+每列注明环节、证据与范围。Non-AI仅是方向标签；不用AI仍可推进，有效专家协作也不排除前置查阅改善。证据不足先交付带缺口草稿与最小验证，不无限追问。
+
+## 看一个完整例子
+
+[煤层气当前问题卡](examples/cbm-standards/problem-card.md)与[当前诊断](examples/cbm-standards/diagnosis.md)：用户逐段查PDF，未定位后请教专家；专家协作有效。当前核验前置查阅的非AI改善机会，尚无现场收益数据。旧误判保留在[修订记录](examples/cbm-standards/revisions.md)，不混进当前状态。
+
+另有[理赔](examples/claims/problem-card.md)、[客服](examples/support.md)、[问数](examples/analytics.md)。数字来源和合成前提各自标注；示例不是当前客户事实。
+
+## 验证与贡献
+
 ```sh
 python3 -m unittest discover -s tests -v
-python3 scripts/check_math.py --stage 20 --share 0.5 --target 22 --unaffected-case-share 0.35
+python3 tests/installation-smoke.py
+python3 scripts/package.py build --output ../fde-problem-framing-v0.3.0.zip
 ```
-第二条的0.35是明确的**假设案件占比**，不能由原文的定损单占比直接代入。默认不提供该参数时不会计算覆盖下界。
 
-实际结果与限制见 tests/RESULTS.md。静态规范检查和数学测试不能证明模型必然遵守流程，更不能证明客户方案有效。按 tests/behavioral-cases.md 可在目标宿主重跑行为测试。
+已知限制：完整多轮复测仍出现重复确认；本版未宣称所有行为测试通过。
 
-## 书稿与分发
-原始需求、来源指纹和修订记录已保留；案例数字来自用户教学情境或显式条件推导。没有公开授权推定，分发前按 references/provenance.md 检查来源元数据与匿名化。未复制私有仓库全文。原私有仓库保持不变。本工程已按用户要求公开托管于 https://github.com/meiluosi/fde-problem-framing （2026-10-20确认），后续推进见 [ROADMAP.md](ROADMAP.md)，历史验证与待办见 [DEVELOPMENT.md](DEVELOPMENT.md)。
+[本版验证记录](tests/RESULTS-v03.md)区分工程检查、多轮行为回放和未完成的现场验证。行为评审关注实际输出，不靠关键词命中证明诊断可靠。测试输入、评分和执行输出分开，见 [回放协议](tests/multiturn/README.md)。
 
-## 煤层气标准检索验证
-新增 [煤层气案例](examples/cbm-standards/README.md)，重点为条款定位与工况适用性。公开材料与专家方向反馈分开留底；验证情况见 [v0.2结果](tests/RESULTS-v02.md)。
+提交问题时提供脱敏原话、期望行为、实际行为及版本，不上传客户原件或凭据。讨论后再增加通用规则，避免把某个案例硬编码进Skill。当前路线见[ROADMAP](ROADMAP.md)。
 
-本轮修订将煤层气案例收回问题定义与诊断，见 [v0.2.1验证记录](tests/RESULTS-v021.md)。
+## 来源与书稿
 
-私有仓库以根路径安装后须检查 references/、templates/ 等子目录是否齐全；本机曾遇到仅安装入口文件的情况，已补齐。完整压缩包解压复制可避免这一缺失。
-
-本版区分改善价值、干预选择与推进状态，见 [判断流程](references/decision-flow.md) 与 [本轮验证](tests/RESULTS-v022.md)。
+公开仓库：[meiluosi/fde-problem-framing](https://github.com/meiluosi/fde-problem-framing)。上游ramp仅保存接口来源与指纹，未复制私有全文；公开用户无法访问私有来源时仍可独立使用本Skill。原话、证据与修订分别留底；书稿使用前按 [来源与匿名化规则](references/provenance.md)处理。本库未代用户选择分发许可证。

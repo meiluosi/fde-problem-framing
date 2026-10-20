@@ -1,0 +1,36 @@
+test_cli (test_math.MathTests.test_cli) ... ok
+test_cli_nan (test_math.MathTests.test_cli_nan) ... ok
+test_coverage_boundaries (test_math.MathTests.test_coverage_boundaries) ... ok
+test_floor (test_math.MathTests.test_floor) ... ok
+test_full_stage (test_math.MathTests.test_full_stage) ... ok
+test_impossible (test_math.MathTests.test_impossible) ... ok
+test_invalid (test_math.MathTests.test_invalid) ... ok
+test_ninety_percent (test_math.MathTests.test_ninety_percent) ... ok
+test_no_document_conversion (test_math.MathTests.test_no_document_conversion) ... ok
+test_no_saving (test_math.MathTests.test_no_saving) ... ok
+test_slower_target (test_math.MathTests.test_slower_target) ... ok
+test_transfer_values (test_math.MathTests.test_transfer_values) ... ok
+test_weighted (test_math.MathTests.test_weighted) ... ok
+test_weighted_boundaries (test_math.MathTests.test_weighted_boundaries) ... ok
+test_links (test_package.PackageTests.test_links) ... ok
+test_portable_paths (test_package.PackageTests.test_portable_paths) ... ok
+test_source_fingerprints (test_package.PackageTests.test_source_fingerprints) ... ok
+test_build_extract_verify (test_release.ReleaseTests.test_build_extract_verify) ... ok
+test_build_is_reproducible (test_release.ReleaseTests.test_build_is_reproducible) ... ok
+test_extra_file_rejected (test_release.ReleaseTests.test_extra_file_rejected) ... ok
+test_git_metadata_not_distributed (test_release.ReleaseTests.test_git_metadata_not_distributed) ... ok
+test_install_and_safe_update (test_release.ReleaseTests.test_install_and_safe_update) ... ok
+test_missing_reference_rejected (test_release.ReleaseTests.test_missing_reference_rejected) ... ok
+test_modified_file_rejected (test_release.ReleaseTests.test_modified_file_rejected) ... ok
+test_no_recursive_release (test_release.ReleaseTests.test_no_recursive_release) ... ok
+test_overlap_rejected (test_release.ReleaseTests.test_overlap_rejected) ... ok
+test_preserve_local_edits (test_release.ReleaseTests.test_preserve_local_edits) ... ok
+test_symlink_rejected (test_release.ReleaseTests.test_symlink_rejected) ... ok
+test_unsafe_manifest_rejected (test_release.ReleaseTests.test_unsafe_manifest_rejected) ... ok
+test_update_rejects_incomplete_old_install (test_release.ReleaseTests.test_update_rejects_incomplete_old_install) ... ok
+test_update_requires_external_backup (test_release.ReleaseTests.test_update_requires_external_backup) ... ok
+
+----------------------------------------------------------------------
+Ran 31 tests in 0.598s
+
+OK

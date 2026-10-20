@@ -1,3 +1,5 @@
+> 本文件为开发历史；当前有效说明见README与ROADMAP。
+
 # 开发记录与待办
 
 2026-10-19，v0.1.0。来源：当前用户需求、引用会话；GitHub连接实际读取 fde-ramp README.md、SKILL.md、references/opportunity-analysis.md、references/evidence.md，文件blob SHA见 references/upstream-sources.json。未验证先前对话所列市场项目，因此不将其能力声明作为本工程依据。
@@ -37,3 +39,6 @@
 
 ## 2026-10-20：公开仓库
 用户明确要求公开当前仓库，GitHub可见性读取确认为PUBLIC。公开的是fde-problem-framing；未修改fde-ramp。README同步当前状态并纠正历史验证链接标签。后续优化仍待实施，不因分析建议而宣称完成。
+
+## 2026-10-20 v0.3.0
+交付P0—P2：三字段决策、当前/历史分离、顺序多轮回放、对话收敛与分环节范围、完整发布及安装更新工具。31项工程测试、14轮行为输出均留存；重复确认仍未稳定消除，作为验证版发布。

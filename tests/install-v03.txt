@@ -1,0 +1,1 @@
+PASS: release built, extracted, full manifest verified, installed and executed from unrelated directory.

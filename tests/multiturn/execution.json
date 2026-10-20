@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-20",
+  "method": "Independent fork-none agents; one user message supplied per completed turn; human review of all outputs",
+  "model": "inherited session model; exact served snapshot not independently recorded",
+  "first_pass": {
+    "cbm": 4,
+    "support": 2,
+    "analytics": 2
+  },
+  "after_targeted_rule_fix": {
+    "retest": 2,
+    "full-retest": 4
+  },
+  "allowed_resources": "SKILL.md and necessary references only",
+  "forbidden_resources": "examples, tests, future turns, other agents outputs; no external research",
+  "limits": "Single run per scenario; no production measurement; full four-turn rerun retained a repeat-question failure."
+}

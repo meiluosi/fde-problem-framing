@@ -1,0 +1,27 @@
+[
+  {
+    "source": "diagnosis.mmd",
+    "exit": 0,
+    "stderr": ""
+  },
+  {
+    "source": "workflow.mmd",
+    "exit": 0,
+    "stderr": ""
+  },
+  {
+    "source": "problem-tree.mmd",
+    "exit": 0,
+    "stderr": ""
+  },
+  {
+    "source": "metrics.mmd",
+    "exit": 0,
+    "stderr": ""
+  },
+  {
+    "source": "decision-flow.mmd",
+    "exit": 0,
+    "stderr": ""
+  }
+]

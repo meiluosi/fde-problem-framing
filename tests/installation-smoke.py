@@ -1,13 +1,19 @@
-"""在临时目录模拟整包复制，不改用户技能配置。"""
+"""Build/extract/verify/install in a temporary directory; never edits host settings."""
 from pathlib import Path
-import tempfile,shutil,subprocess,sys
+import importlib.util,json,shutil,subprocess,sys,tempfile,zipfile
 source=Path(__file__).resolve().parents[1]
+spec=importlib.util.spec_from_file_location('package',source/'scripts/package.py')
+package=importlib.util.module_from_spec(spec);spec.loader.exec_module(package)
 with tempfile.TemporaryDirectory(prefix='fde-skill-install-') as temp:
- dest=Path(temp)/'skills'/source.name
- shutil.copytree(source,dest,ignore=shutil.ignore_patterns('__pycache__','.git'))
- assert (dest/'SKILL.md').is_file()
- result=subprocess.run([sys.executable,str(dest/'scripts/check_math.py'),'--stage','20','--share','.5','--target','22'],cwd=temp,capture_output=True,text=True)
+ base=Path(temp);copy=base/'source'
+ shutil.copytree(source,copy,ignore=shutil.ignore_patterns('.git','__pycache__','.DS_Store'))
+ archive=package.build(copy,base/'release.zip')
+ with zipfile.ZipFile(archive) as z:z.extractall(base/'unpacked')
+ unpacked=base/'unpacked/fde-problem-framing'
+ package.verify(unpacked)
+ dest=base/'skills/fde-problem-framing';package.install(unpacked,dest)
+ package.verify(dest)
+ result=subprocess.run([sys.executable,str(dest/'scripts/check_math.py'),'--stage','20','--share','.5','--target','22'],cwd=base,capture_output=True,text=True)
  assert result.returncode==0,result.stderr
- import json
  assert json.loads(result.stdout)['allowed_stage']==2
- print('PASS: 完整复制后，从其他工作目录执行脚本成功；未改真实安装目录。')
+ print('PASS: release built, extracted, full manifest verified, installed and executed from unrelated directory.')
