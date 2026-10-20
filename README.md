@@ -66,5 +66,9 @@ python3 scripts/check_math.py --stage 20 --share 0.5 --target 22 --unaffected-ca
 
 本版区分改善价值、干预选择与推进状态，见 [判断流程](references/decision-flow.md) 与 [本轮验证](tests/RESULTS-v022.md)。
 
+## 参考与致谢
+
+本系列各 Skill 在方法设计上不同程度参考了《FDE:AI落地实战指南》，以及作者本人的 FDE 实践经历。各 Skill 的流程、模板、规则与脚本是在此基础上改写和扩展的方法。示例中的人物、数字与场景均为虚构，不是客户事实。
+
 ## 许可
 MIT，见 [LICENSE](LICENSE)。
